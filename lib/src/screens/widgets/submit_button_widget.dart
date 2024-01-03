@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 
 class SubmitButtonWidget extends StatelessWidget {
-  const SubmitButtonWidget({super.key});
+  final GlobalKey<FormState> parentKey;
+
+  const SubmitButtonWidget({super.key, required this.parentKey});
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(onPressed: () {}, child: const Text('Submit!'));
+    return ElevatedButton(
+      onPressed: () {
+        parentKey.currentState?.reset();
+      },
+      child: const Text('Submit!'),
+    );
   }
 }

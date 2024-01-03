@@ -21,13 +21,13 @@ class LoginScreenState2 extends State<LoginScreen2> {
         margin: const EdgeInsets.all(20.0),
         child: Form(
           key: loginFormKey,
-          child: const Column(
+          child: Column(
             children: [
-              EmailFieldWidget(),
-              Padding(padding: EdgeInsets.only(top: 20.0)),
-              PasswordFieldWidget(),
-              Padding(padding: EdgeInsets.only(top: 20.0)),
-              SubmitButtonWidget(),
+              const EmailFieldWidget(),
+              const Padding(padding: EdgeInsets.only(top: 20.0)),
+              const PasswordFieldWidget(),
+              const Padding(padding: EdgeInsets.only(top: 20.0)),
+              SubmitButtonWidget(parentKey: loginFormKey),
             ],
           ),
         ));
