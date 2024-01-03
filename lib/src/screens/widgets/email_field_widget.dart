@@ -23,6 +23,9 @@ class EmailFieldWidget extends StatelessWidget {
         }
         return null;
       },
+      onSaved: (value) {
+        print(value);
+      },
     );
   }
 }

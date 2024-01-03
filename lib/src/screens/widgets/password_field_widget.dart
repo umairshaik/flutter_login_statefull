@@ -22,9 +22,12 @@ class PasswordFieldWidget extends StatelessWidget {
                 r'^(?=.*?[A-Za-z])(?=.*?[0-9])(?=.*?[!@#$%^&*()_+{}\[\]:;<>,./?]).{8,}$')
             .hasMatch(value)) {
           print(value);
-          return 'Password must contain at least one special character and one digit';
+          return 'Password must contain \nat least one special character \nand one digit';
         }
         return null;
+      },
+      onSaved: (value){
+        print(value);
       },
     );
   }

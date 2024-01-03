@@ -10,6 +10,7 @@ class SubmitButtonWidget extends StatelessWidget {
     return ElevatedButton(
       onPressed: () {
         if (parentKey.currentState!.validate()) {
+          parentKey.currentState!.save();
           print("accepted");
         } else {
           print("rejected");
