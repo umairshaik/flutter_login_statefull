@@ -13,12 +13,15 @@ class LoginScreen2 extends StatefulWidget {
 }
 
 class LoginScreenState2 extends State<LoginScreen2> {
+  final loginFormKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Container(
         margin: const EdgeInsets.all(20.0),
-        child: const Form(
-          child: Column(
+        child: Form(
+          key: loginFormKey,
+          child: const Column(
             children: [
               EmailFieldWidget(),
               Padding(padding: EdgeInsets.only(top: 20.0)),
