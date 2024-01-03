@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_stateful/src/screens/login_screen.dart';
+import 'package:login_stateful/src/screens/login_screen2.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -8,7 +8,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: "Log me in",
-      home: Scaffold(body: LoginScreen()),
+      home: Scaffold(body: LoginScreen2()),
     );
   }
 }
