@@ -9,7 +9,11 @@ class SubmitButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        parentKey.currentState?.reset();
+        if (parentKey.currentState!.validate()) {
+          print("accepted");
+        } else {
+          print("rejected");
+        }
       },
       child: const Text('Submit!'),
     );

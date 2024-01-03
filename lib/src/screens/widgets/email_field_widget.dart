@@ -11,6 +11,18 @@ class EmailFieldWidget extends StatelessWidget {
         labelText: "Email address",
         hintText: 'youremail@example.com',
       ),
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return 'Please enter an email';
+        }
+        // Regular expression for email validation
+        String emailPattern = r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$';
+        RegExp regex = RegExp(emailPattern);
+        if (!regex.hasMatch(value)) {
+          return 'Please enter a valid email';
+        }
+        return null;
+      },
     );
   }
 }
