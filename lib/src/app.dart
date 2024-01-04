@@ -7,8 +7,11 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: "Log me in",
-      home: Scaffold(body: LoginScreen2()),
-    );
+        title: "Log me in",
+        home: Scaffold(
+            body: Padding(
+          padding: EdgeInsets.all(10.0),
+          child: LoginScreen2(),
+        )));
   }
 }

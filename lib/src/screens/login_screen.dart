@@ -68,7 +68,7 @@ class LoginScreenState extends State<LoginScreen> with ValidationMixin {
           var state = formKey.currentState;
           if (state != null && state.validate()) {
             state.save();
-            print("Time to post $email and $password to my API");
+
           }
         },
         child: const Text("Submit"),
